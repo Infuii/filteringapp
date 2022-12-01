@@ -43,12 +43,14 @@ const Home: NextPage = () => {
       <div>
         <h2 style={{ textAlign: "center" }}> Filters</h2>
         <div className="bg-red-500">
-          <button onClick={() => setFiltered([])}>Clear</button>
+          <button className="" onClick={() => setFiltered([])}>
+            Clear
+          </button>
         </div>
-        <div className="flex space-x-5">
+        <div className="flex justify-center space-x-5">
           {categories.map((element, index) => (
             <button
-              className={`my-1 mx-2 flex flex-col justify-between rounded border border-solid border-black px-2 py-1 ${
+              className={`my-1 mx-2 flex flex-col justify-center rounded border border-solid border-black px-2 py-1 ${
                 filtered.includes(element) && "bg-black text-white"
               }`}
               onClick={() => {
